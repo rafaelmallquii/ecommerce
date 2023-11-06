@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
-import { Dropdown } from "primereact/dropdown";
-import { InputText } from "primereact/inputtext";
+import MenuDrox from "../Menu/MenuDropwdown";
+import MenuDaisy from "../Menu/MenuDaisy";
 function NavBar() {
-  const [selectedCity, setSelectedCity] = useState(null);
-  const cities = [
-    { name: "New York", code: "NY" },
-    { name: "Rome", code: "RM" },
-    { name: "London", code: "LDN" },
-    { name: "Istanbul", code: "IST" },
-    { name: "Paris", code: "PRS" },
-  ];
+  // const [selectedCity, setSelectedCity] = useState(null);
+  // const cities = [
+  //   { name: "New York", code: "NY" },
+  //   { name: "Rome", code: "RM" },
+  //   { name: "London", code: "LDN" },
+  //   { name: "Istanbul", code: "IST" },
+  //   { name: "Paris", code: "PRS" },
+  // ];
 
   return (
     <nav>
@@ -39,25 +39,14 @@ function NavBar() {
             />
           </a>
         </div>
-        <form className="flex justify-center m-6 ">
-          <Dropdown
-            value={selectedCity}
-            onChange={(e) => setSelectedCity(e.value)}
-            options={cities}
-            optionLabel="name"
-            placeholder="Todos"
-            className="w-40 border-2 border-black md:w-14rem rounded-none"
-          />
-          <div className=" flex border-2 border-black flex-column align-items-center">
+        <form className=" flex justify-center m-6  ">
+          <MenuDrox/>
+          <div className="  flex border-2 border-black flex-column align-items-center">
             {/* <InputText type="text" placeholder="Normal" /> */}
-            <InputText
-              type="text"
-              className="p-inputtext-lg w-[600px] focus:ring-0"
-              placeholder="Busca en nuestro catálogo"
-            />
+           
             {/* <InputText type="text" className="p-inputtext-sm" placeholder="Small" /> */}
           </div>
-          <button className="bg-[#F51300] hover:bg-black text-white font-bold py-2 px-4 rounded">
+          <button className="bg-[#F51300] hover:bg-black text-white font-bold py-2 px-4 h-14 rounded">
             <span>BUSCAR</span>
           </button>
         </form>
@@ -79,6 +68,10 @@ function NavBar() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center bg-[#F51300]">
+        {/* <MenuBar/> */}
+        {/* <MenuDaisy/> */}
       </div>
     </nav>
   );

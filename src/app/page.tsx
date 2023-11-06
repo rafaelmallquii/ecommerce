@@ -1,9 +1,10 @@
-import Image from 'next/image'
-
-export default function Home() {
+// import RootLayout from "./layout";
+import React from "react";
+import Home from '../view/home/Home';
+export default function Index() {
   return (
     <>
-      <h1 className=''>Hola </h1>
+      <Home />
     </>
-  )
+  );
 }
